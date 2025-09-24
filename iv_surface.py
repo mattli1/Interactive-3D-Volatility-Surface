@@ -15,11 +15,6 @@ def fetch_options_data(
     max_days=730,
     progress_callback=None
 ):
-    """
-    Fetch options data for up to 'max_days' in the future.
-    'moneyness_range' is in decimal form, e.g. (0.7, 1.3) means
-    70%-130% of the spot price.
-    """
     try:
         if progress_callback:
             progress_callback("Fetching ticker data...", 10)
@@ -238,4 +233,5 @@ def debug_iv_surface(
 
     except Exception as e:
         raise Exception(f"Error generating IV surface: {str(e)}")
+
 
